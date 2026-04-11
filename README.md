@@ -55,9 +55,6 @@ Each pixel is `24h` + 6 hex digits in your chosen color order. `$reverse()` hand
 
 ## Common Pitfalls
 
-**Lucid file won't compile after pasting**
-No blank lines between data blocks inside `$reverse({...})`. Every row must end with a comma except the very last row of the very last screen.
-
 **Colors look wrong on the matrix**
 Check **Color Order** in Settings — WS2812B uses **GRB**, not RGB.
 
