@@ -10,19 +10,19 @@ Built for **50.002 Computation Structures** at SUTD. Feel free to use, modify, a
 
 A single-file HTML tool ([led_pixel_editor.html](led_pixel_editor.html)) that lets you visually design pixel art and export it as Lucid V2 `const` arrays ready to paste into your `.luc` ROM files.
 
-- **Visual editing** — click or drag to paint pixels, type R/G/B values, undo per pixel
-- **Multiple profiles** — ships with EASY/MED/HARD; add unlimited custom screens
-- **Resizable grid** — 4×4 up to 256×256 (default 32×32), pixel data preserved on resize
-- **Lucid V2 import & export** — live code preview, copy individual or all profiles, paste existing code back to reconstruct the grid
-- **PNG export** — scaled-up nearest-neighbor PNGs for docs and previews
-- **Session save/load** — `.ledpx` files store everything (profiles, grid size, settings) so you can share and resume
-- **Settings** — color order (GRB/RGB/BGR/…), const prefix, `$reverse()` toggle for serpentine wiring
+- **Visual editing**: Click or drag to paint pixels, type R/G/B values, undo per pixel
+- **Multiple profiles**: Ships with EASY/MED/HARD, can add unlimited custom screens
+- **Resizable grid**: 4×4 up to 256×256 (default 32×32), pixel data preserved on resize
+- **Lucid V2 import & export**: live code preview, copy individual or all profiles, paste existing code back to reconstruct the grid
+- **PNG export**: scaled-up nearest-neighbor PNGs for docs and previews
+- **Session save/load**: `.ledpx` files store everything (profiles, grid size, settings) so you can share and resume
+- **Settings**: color order (GRB/RGB/BGR/…), const prefix, `$reverse()` toggle for serpentine wiring
 
 ---
 
 ## Getting Started
 
-Download `led_pixel_editor.html` and open it in any modern browser. No server, no install, no build step.
+Download `led_pixel_editor.html` and open it in any modern browser.
 
 ---
 
@@ -56,7 +56,7 @@ Each pixel is `24h` + 6 hex digits in your chosen color order. `$reverse()` hand
 ## Common Pitfalls
 
 **Colors look wrong on the matrix**
-Check **Color Order** in Settings — WS2812B uses **GRB**, not RGB.
+Check **Color Order** in Settings: WS2812B uses **GRB**, not RGB.
 
 **Image is mirrored on the matrix**
 If your matrix isn't serpentine-wired, uncheck the `$reverse()` toggle in Settings.

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LED Matrix Pixel Editor — Kwok Zhan Rui</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --space-0: #05060d;
+      --space-1: #0a0e1c;
+      --space-2: #111733;
+      --line:    #2a3358;
+      --gold:    #e8c873;
+      --gold-soft: #c9a84e;
+      --text:    #e9ecf5;
+      --text-mut:#93a0c4;
+      --text-dim:#5d6a8c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: linear-gradient(180deg, var(--space-1) 0%, var(--space-0) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .back-link {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-mut);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--gold); }
+
+    .topbar-right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .topbar-right a {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .topbar-right a:hover { color: var(--text); }
+
+    .hero {
+      text-align: center;
+      padding: 48px 24px 32px;
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(20px, 4vw, 32px);
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--text-mut);
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.5;
+    }
+
+    .scroll-hint {
+      font-size: 13px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .editor-frame {
+      flex: 1;
+      border-top: 1px solid var(--line);
+    }
+
+    .editor-frame iframe {
+      width: 100%;
+      height: calc(100vh - 60px);
+      min-height: 600px;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <a class="back-link" href="/">← Back to Portfolio</a>
+    <div class="topbar-right">
+      <a href="https://github.com/Kjanray/pixel-editor" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>LED Matrix Pixel Editor</h1>
+    <p>Design sprites for WS2812B LED matrices and export as Lucid V2 code. Built for 50.002 Computation Structures at SUTD.</p>
+    <div class="scroll-hint">↓ Try it below</div>
+  </section>
+
+  <div class="editor-frame">
+    <iframe src="led_pixel_editor.html" allow="clipboard-write" title="LED Matrix Pixel Editor"></iframe>
+  </div>
+</body>
+</html>
