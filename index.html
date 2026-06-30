@@ -21,12 +21,16 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
     body {
       background: linear-gradient(180deg, var(--space-1) 0%, var(--space-0) 100%);
       background-attachment: fixed;
       color: var(--text);
       font-family: 'Rajdhani', sans-serif;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -108,8 +112,7 @@
 
     .editor-frame iframe {
       width: 100%;
-      height: calc(100vh - 60px);
-      min-height: 600px;
+      height: 100%;
       border: none;
       display: block;
     }
